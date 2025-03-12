@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function Navigation() {
   const session = await auth();
-  const name = session.user?.name.split(" ")[0];
+  const name = session ? session.user?.name.split(" ")[0] : null;
 
   return (
     <nav className="z-10 text-xl">
@@ -40,7 +40,7 @@ export default async function Navigation() {
                 />
               </div>
 
-              <span> {name} </span>
+              <span> {name ? name : "could not read name"} </span>
             </Link>
           ) : (
             <Link
