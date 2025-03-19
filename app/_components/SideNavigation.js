@@ -13,17 +13,14 @@ const navLinks = [
   {
     name: "Home",
     href: "/account",
-    icon: <HomeIcon className="h-5 w-5 text-primary-600" />,
   },
   {
     name: "Reservations",
     href: "/account/reservations",
-    icon: <CalendarDaysIcon className="h-5 w-5 text-primary-600" />,
   },
   {
     name: "Guest profile",
     href: "/account/profile",
-    icon: <UserIcon className="h-5 w-5 text-primary-600" />,
   },
 ];
 
@@ -32,7 +29,7 @@ function SideNavigation() {
 
   return (
     <nav className="border-r border-primary-900">
-      <ul className="flex flex-col gap-2 h-full text-lg">
+      <ul className="flex text-center flex-col gap-2 h-full text-lg">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
@@ -40,7 +37,33 @@ function SideNavigation() {
               `}
               href={link.href}
             >
-              {link.icon}
+              {link.name === "Home" && (
+                <HomeIcon
+                  className={`h-5 w-5 ${
+                    pathname === link.href
+                      ? "text-primary-50"
+                      : "text-primary-600"
+                  }`}
+                />
+              )}
+              {link.name === "Reservations" && (
+                <CalendarDaysIcon
+                  className={`h-5 w-5 ${
+                    pathname === link.href
+                      ? "text-primary-50"
+                      : "text-primary-600"
+                  }`}
+                />
+              )}
+              {link.name === "Guest profile" && (
+                <UserIcon
+                  className={`h-5 w-5 ${
+                    pathname === link.href
+                      ? "text-primary-50"
+                      : "text-primary-600"
+                  }`}
+                />
+              )}
               <span className="relative pb-2 block grow ">
                 {link.name}
 
