@@ -7,7 +7,7 @@ export default async function Navigation() {
   const name = session ? session.user?.name.split(" ")[0] : null;
 
   return (
-    <nav className="z-10 text-xl">
+    <nav className="z-10 text-sm sm:text-xl">
       <ul className="flex gap-16 items-center">
         <li>
           <Link

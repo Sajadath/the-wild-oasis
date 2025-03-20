@@ -28,7 +28,7 @@ function ReservationForm({ cabin, user }) {
 
   return (
     <div className="">
-      <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
+      <div className="bg-primary-800 text-primary-300 text-sm gap-2 px-6 md:px-16 py-2 flex justify-between items-center">
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
@@ -48,7 +48,7 @@ function ReservationForm({ cabin, user }) {
           await createBookingWithData(formData);
           resetRange();
         }}
-        className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col"
+        className="bg-primary-900 py-10 px-16 text-sm md:text-lg flex gap-5 flex-col"
       >
         <div className="space-y-2">
           <label htmlFor="numGuests">How many guests?</label>
@@ -70,8 +70,10 @@ function ReservationForm({ cabin, user }) {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="observations">
-            Anything we should know about your stay?
+          <label htmlFor="observations ">
+            <span className="text-sm">
+              Anything we should know about your stay?
+            </span>
           </label>
           <textarea
             name="observations"
