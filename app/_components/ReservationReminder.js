@@ -11,7 +11,7 @@ function ReservationReminder() {
   if (!range.from || !range.to) return null;
 
   return (
-    <div className="fixed  bottom-6 left-[5%] right-[5%] py-5 px-8 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 text-primary-100 text-sm  font-semibold shadow-xl shadow-slate-900 grid grid-cols-[1fr_auto] gap-8 ">
+    <div className="fixed  bottom-6 left-[5%] right-[5%] py-5 px-8 rounded-2xl backdrop-blur-sm bg-black/20 border border-white/20 text-primary-100 text-sm  font-semibold shadow-xl shadow-slate-900 grid grid-cols-[1fr_auto] gap-8 ">
       <p className="text-xs content-center">
         Don&apos;t forget to reserve your dates from{" "}
         {format(new Date(range.from), "MMM dd yyyy")} to{" "}
