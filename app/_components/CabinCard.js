@@ -9,7 +9,7 @@ function CabinCard({ cabin }) {
     <div className="flex flex-col md:flex-row border-primary-800 border">
       <Link
         href={`/cabins/${id}`}
-        className=" w-full h-32 md:h-full md:w-[35%]  relative "
+        className=" w-full h-32 md:h-full md:w-[35%]  relative hover:scale-110 transition-transform duration-300"
       >
         <Image
           fill
@@ -22,7 +22,7 @@ function CabinCard({ cabin }) {
       <div className="flex-grow">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
           <Link href={`/cabins/${id}`}>
-            <h3 className="text-accent-500 font-semibold text-2xl mb-3">
+            <h3 className="text-accent-500 font-semibold text-2xl mb-3 transition-all duration-300 hover:translate-x-3">
               Cabin {name}
             </h3>
           </Link>
