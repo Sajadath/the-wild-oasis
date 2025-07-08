@@ -7,20 +7,25 @@ function CabinCard({ cabin }) {
 
   return (
     <div className="flex flex-col md:flex-row border-primary-800 border">
-      <div className=" w-full h-32 md:h-full md:w-[35%]  relative ">
+      <Link
+        href={`/cabins/${id}`}
+        className=" w-full h-32 md:h-full md:w-[35%]  relative "
+      >
         <Image
           fill
           src={image}
           alt={`Cabin ${name}`}
           className="object-cover border-r border-primary-800"
         />
-      </div>
+      </Link>
 
       <div className="flex-grow">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
-          <h3 className="text-accent-500 font-semibold text-2xl mb-3">
-            Cabin {name}
-          </h3>
+          <Link href={`/cabins/${id}`}>
+            <h3 className="text-accent-500 font-semibold text-2xl mb-3">
+              Cabin {name}
+            </h3>
+          </Link>
 
           <div className="flex gap-3 items-center mb-2">
             <UsersIcon className="h-5 w-5 text-primary-600" />
